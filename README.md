@@ -1,4 +1,4 @@
 progfun
 =======
 
-https://class.coursera.org/progfun-002/class/index
+site: https://class.coursera.org/progfun-002/class/index
