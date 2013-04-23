@@ -1,9 +1,10 @@
 *.class
 *.log
-
+.cache
 # sbt specific
 dist/*
 target/
+bin/
 #lib_managed/
 #src_managed/
 #project/boot/
