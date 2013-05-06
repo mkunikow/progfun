@@ -6,6 +6,7 @@ dist/*
 target/
 bin/
 .worksheet/
+submission/
 #lib_managed/
 #src_managed/
 #project/boot/
