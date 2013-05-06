@@ -3,7 +3,7 @@ package week6
 import scala.io.Source
 
 object Translate {
-  val file = Source.fromURL("file:///home/ger/develop/progfun-workspace/progfun/src/week6/linuxwords.txt", "UTF-8")
+  val file = Source.fromURL("file:///home/ger/develop/git/progfun/progfun/src/week6/linuxwords.txt", "UTF-8")
                                                   //> file  : scala.io.BufferedSource = non-empty iterator
 
   val words = file.getLines.toList.filter(word => word.forall(chr => chr.isLetter))
@@ -23,8 +23,8 @@ object Translate {
                                                   //| Output exceeds cutoff limit.
 
   val mnem = Map('2' -> "ABC", '3' -> "DEF", '4' -> "GHI", '5' -> "JKL", '6' -> "MNO", '7' -> "PQRS", '8' -> "TUV", '9' -> "WXYZ")
-                                                  //> mnem  : scala.collection.immutable.Map[Char,java.lang.String] = Map(8 -> TUV
-                                                  //| , 4 -> GHI, 9 -> WXYZ, 5 -> JKL, 6 -> MNO, 2 -> ABC, 7 -> PQRS, 3 -> DEF)
+                                                  //> mnem  : scala.collection.immutable.Map[Char,String] = Map(8 -> TUV, 4 -> GHI
+                                                  //| , 9 -> WXYZ, 5 -> JKL, 6 -> MNO, 2 -> ABC, 7 -> PQRS, 3 -> DEF)
 
   val charCode: Map[Char, Char] =
     (for ((num, letters) <- mnem; char <- letters) yield (char, num)).toMap
@@ -35,7 +35,7 @@ object Translate {
   //mnem.flatMap( value => value._2.map(char => (value._1, char))).toMap
 
   def wordCode(word: String): String =
-    word.toUpperCase() map charCode               //> wordCode: (word: String)String
+    word.toUpperCase map charCode                 //> wordCode: (word: String)String
 
   wordCode("GERMAN")                              //> res0: String = 437626
 
@@ -53,10 +53,10 @@ object Translate {
         } yield word :: rest
       }.toSet                                     //> encode: (number: String)Set[List[String]]
 
-  encode("7225247386")                            //> res1: Set[List[String]] = Set(List(sack, ah, re, to), List(rack, bird, to),
-                                                  //|  List(sack, air, fun), List(rack, ah, re, to), List(pack, bird, to), List(s
-                                                  //| ack, bird, to), List(pack, air, fun), List(Scala, ire, to), List(Scala, is,
-                                                  //|  fun), List(pack, ah, re, to), List(rack, air, fun))
+  encode("7225247386")                            //> res1: Set[List[String]] = Set(List(rack, ah, re, to), List(sack, ah, re, to
+                                                  //| ), List(Scala, ire, to), List(sack, air, fun), List(rack, air, fun), List(r
+                                                  //| ack, bird, to), List(pack, air, fun), List(pack, ah, re, to), List(pack, bi
+                                                  //| rd, to), List(Scala, is, fun), List(sack, bird, to))
 
   def translate(number: String): Set[String] = encode(number) map (_ mkString " ")
                                                   //> translate: (number: String)Set[String]
