@@ -5,6 +5,7 @@
 dist/*
 target/
 bin/
+.worksheet/
 #lib_managed/
 #src_managed/
 #project/boot/
