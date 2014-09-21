@@ -1,4 +1,4 @@
-package week6
+//package week6
 
 object nqueens {
   def queens(n: Int): Set[List[Int]] = {

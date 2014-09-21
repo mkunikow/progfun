@@ -1,4 +1,4 @@
-package week2
+//package week2
 
 object Currying {
   def product(f: Int => Int)(a: Int, b: Int): Int =

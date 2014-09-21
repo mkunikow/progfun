@@ -1,4 +1,4 @@
-package week7
+//package week7
 
 import com.sun.org.apache.xml.internal.serializer.ToStream
 
@@ -10,5 +10,5 @@ object Streams {
 
   ((1000 to 10000).toStream filter isPrime)(1)    //> res1: Int = 1013
   
-  10 #:: ( (10 to 10000).toStream)                //> res2: scala.collection.immutable.Stream[Int] = Stream(10, ?)
+  9 #:: ( (10 to 10000).toStream)                //> res2: scala.collection.immutable.Stream[Int] = Stream(9, ?)
 }

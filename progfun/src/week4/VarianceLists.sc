@@ -1,4 +1,6 @@
-package week4
+//package week4
+
+import week4._
 
 object VarianceLists {
   def f(xs: VList[NonEmpty], x:Empty) = xs prepend x

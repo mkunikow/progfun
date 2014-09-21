@@ -1,4 +1,4 @@
-package week7
+//package week7
 
 object LazyEvaluation {
   def expr = {

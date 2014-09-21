@@ -1,4 +1,4 @@
-package week5
+//package week5
 
 object mergeSort {
   def merge1(xs: List[Int], ys: List[Int]): List[Int] = xs match {

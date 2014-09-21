@@ -1,4 +1,4 @@
-package week5
+//package week5
 
 object ReductionsOnList {
   def mapFun[T, U](xs: List[T], f: T => U): List[U] =

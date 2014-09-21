@@ -1,4 +1,6 @@
-package week4
+//package week4
+
+import week4._
 
 object PatternMatching {
   val e1 = Sum(Prod(Number(1), Number(2)), Sum(Prod(Number(3), Var("x")), Var("y")))

@@ -1,4 +1,4 @@
-package week6
+//package week6
 
 object polynomials {
   class Poly(val terms0: Map[Int, Double]) {

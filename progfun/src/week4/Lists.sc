@@ -1,4 +1,5 @@
-package week4
+//package week4
+import week4._
 
 object Lists {
 

@@ -1,4 +1,4 @@
-package week7
+//package week7
 
 object InfiniteSequences {
   def from(n: Int): Stream[Int] = n #:: from(n + 1)

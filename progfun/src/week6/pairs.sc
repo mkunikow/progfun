@@ -1,4 +1,4 @@
-package week6
+//package week6
 
 object pairs {
   //Sacado de OtherColections
@@ -10,7 +10,11 @@ object pairs {
     //xss.foldRight(IndexedSeq[(Int, Int)]())(_ ++ _)
     //Es lo mismo!!
     xss.flatten
-  }                                               //> combine: (n: Int)IndexedSeq[(Int, Int)]
+  }
+
+                                                 //> combine: (n: Int)IndexedSeq[(Int, Int)]
+//law
+// xs flatMap f = (xs map f).flatten
 
   def combine2(n: Int): IndexedSeq[(Int, Int)] = {
     (1 until n) flatMap (i => (1 until i) map (j => (i, j)))
