@@ -1,4 +1,4 @@
-package week5
+//package week5
 
 object MoreFuntionsOnList {
   def init(xs: List[Int]): List[Int] = xs match {

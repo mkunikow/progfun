@@ -21,6 +21,10 @@ object Currying {
   
   
   product2(x => x)(1, 5)                          //> res2: Int = 120
+
+
+  def sum(f:Int => Int) (a: Int, b: Int) : Int =
+    if (a > b) 0 else f(a) + sum(f)(a + 1, b)
   
   
   

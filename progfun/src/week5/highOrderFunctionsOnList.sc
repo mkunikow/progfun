@@ -11,6 +11,17 @@ object highOrderFunctionsOnList {
   squareList(List(1, 2, 3, 4, 5))                 //> res0: List[Int] = List(1, 4, 9, 16, 25)
   squareListWithMap(List(1, 2, 3, 4, 5))          //> res1: List[Int] = List(1, 4, 9, 16, 25)
 
+
+  def filter[T](list: List[T])(p: T => Boolean): List[T] = list match {
+    case Nil => Nil
+    case x :: xs => if (p(x)) x :: xs else filter(xs)(p)
+  }
+
+  filter(List(1,2,3,4,5,6))(p => p > 2)
+
+  def posElems(xs: List[Int]): List[Int] = xs filter (x => x > 0)
+  posElems(List(-1,1,2))
+
   val nums = List(1, 2, 3, 5, 6)                  //> nums  : List[Int] = List(1, 2, 3, 5, 6)
   nums filter (x => x > 3)                        //> res2: List[Int] = List(5, 6)
   nums filterNot (x => x > 3)                     //> res3: List[Int] = List(1, 2, 3)

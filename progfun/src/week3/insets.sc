@@ -8,6 +8,8 @@ object insets {
   val c = new NonEmpty(3, Empty, Empty)           //> c  : week3.NonEmpty = {.3.}
 
   a.union(b).union(c)                             //> res1: week3.IntSet = {{.1{.2.}}3.}
+  a.contains(2)
+
 }
 
 

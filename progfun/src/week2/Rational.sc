@@ -1,4 +1,4 @@
-package week2
+//package week2
 
 object Rational {
   println("Welcome to the Scala worksheet")       //> Welcome to the Scala worksheet
@@ -21,10 +21,13 @@ class Rational(x: Int, y: Int) {
 
   require(y != 0, "the denominator must not be 0")
 
+
   def this(x: Int) = this(x, 1)
 
-  val numer = x
-  val denom = y
+  private val g = gcd(x, y)
+
+  val numer = x / g
+  val denom = y / g
 
   def < (that: Rational) = numer * that.denom < that.numer * denom
 
@@ -40,8 +43,7 @@ class Rational(x: Int, y: Int) {
   def neg = -this
 
   override def toString = {
-  	val g = gcd(numer,denom)
-  	(numer / g) + "/" + (denom / g)
+  	numer + "/" + denom
   }
 
 }
