@@ -1,4 +1,4 @@
-package week6
+//package week6
 
 object MapsStructure {
   val romanNumerals = Map("I" -> 1, "V" -> 5, "X" -> 10)
