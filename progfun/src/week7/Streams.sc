@@ -9,9 +9,11 @@ object Streams {
   def nthPrime(from: Int, to: Int, n: Int): Int ={
     if (from >= to) throw new Error("no prime")
     else if (isPrime(from))
-      if (n == 1) from else nthPrime(from + 1, to, n - 1 )
+      if (n == 1) from else nthPrime(from + 1, to, n - 1)
     else nthPrime(from + 1, to ,n)
   }
+
+  secondPrime(1000, 10000)
 
   (10 to 10000).toStream                          //> res0: scala.collection.immutable.Stream[Int] = Stream(10, ?)
 
